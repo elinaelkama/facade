@@ -1,56 +1,57 @@
+:root{
+	--text-primary: #fff;
+	--text-secondary: #aaa;
+	--text-tertiary: #a5a6a8;
+	--text-reverse: #000;
+	--accent-primary: #fff;
+}
+
 body {
     background-color: #000;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: var(--text-primary);
 	text-align: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+header{
+	margin-bottom: 4em;
+}
+
+article > h1{
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+article > h3{
+	color: var(--text-primary);
 }
 
 h1, h2, h3, h4 {
-    color: #aaa;
-	font-weight: 300;
-}
-
-h1{
-	text-transform: uppercase;
-}
-
-h3{
-	color: #fff;
-	font-size: 1em;
-	font-weight: bold;
-}
-
-p{
-	font-size: 1em;
-}
-
-.item-name{
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 1em;
-    color: #fff;
+    color: var(--text-secondary);
 }
 
 a{
     text-decoration: none;
-	cursor: pointer;
 	color: inherit;
 }
 
-a:hover, a:active {
-    color: #a5a6a8;
+a:hover:not(.no-click), a:active:not(.no-click) {
+    color: var(--text-tertiary);
+	cursor: pointer;
 }
 
 button{
-	border: 1px solid #fff;
-	color: #a5a6a8;
+	border: 1px solid var(--accent-primary);
+	color: var(--text-tertiary);
     background: transparent;
 	cursor: pointer;
 	padding: 1em;
 }
 
 .highlight-button:hover{
-	color: #000;
+	color: var(--text-reverse);
 	background-color:#fff;
 }
 
@@ -70,7 +71,7 @@ nav > ul > li{
 nav > ul > li:hover > ul{
 	display: block;
 	background: #202020;
-	border-top: 2px solid #fff;
+	border-top: 2px solid var(--accent-primary);
 }
 
 nav > ul > li > ul{
@@ -112,35 +113,90 @@ input:not([type="submit"]) {
 }
 
 input[type="submit"]{
-	border: 1px solid #fff;
-	color: #a5a6a8;
+	border: 1px solid var(--accent-primary);
+	color: var(--text-tertiary);
     background: transparent;
 	cursor: pointer;
     padding: 0.75rem;
 }
 
 .menu{
+	max-width: 60rem;
+	gap: 3rem;
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 	justify-content: space-evenly;
+	margin: auto;
 	flex-wrap: nowrap;
-	@media screen and (max-width: 600) {
+	text-align: left;
+	@media screen and (max-width: 600px) {
 		grid-template-columns: none;
 	}
 }
 
-.menu-item{
-	text-align: left;
+.menu > div{
+	display: grid;
+	grid-template-columns: auto min-content;
+	gap: 0 2rem;
+	justify-content: space-between;
+}
+
+.menu h4{
+	font-weight: bold;
+	text-transform: uppercase;
+    color: var(--text-primary);
+	margin-bottom: 0;
 }
 
 .diet-list{
 	list-style: none;
-	font-size: 0.75em;
+	font-size: 0.95em;
 	text-align: center;
+	padding: 0;
 }
 
 .open-hours{
 	margin-left: auto;
   	margin-right: auto;
 	text-align: center;
+}
+
+.bg{
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.bg::before{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.65);
+	box-shadow: 0 0 5em 0.25em black inset;
+	content: "";
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.bg-sandwiches{
+	background-image: url("/images/bg_sandwiches.jpg");
+}
+
+.bg-chickenwings{
+	background-image: url("/images/bg_chickenwings.jpg");
+}
+
+.bg-tomatoes{
+	background-image: url("/images/bg_tomatoes.jpg");
+}
+
+.bg-cake{
+	background-image: url("/images/bg_carrotcake.jpg");
+}
+
+.bg-champagne{
+	background-image: url("/images/bg_champagne.jpg");
+}
+.bg-cloudberry{
+	background-image: url("/images/bg_cloudberry.jpg");
 }
