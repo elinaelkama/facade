@@ -5,16 +5,36 @@ body {
 	text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     color: #aaa;
-	font-size: 2em;
 	font-weight: 300;
 }
 
+h1{
+	text-transform: uppercase;
+}
+
+h3{
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+p{
+	font-size: 1em;
+}
+
+.item-name{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1em;
+    color: #fff;
+}
 
 a{
     text-decoration: none;
 	cursor: pointer;
+	color: inherit;
 }
 
 a:hover, a:active {
@@ -23,7 +43,6 @@ a:hover, a:active {
 
 button{
 	border: 1px solid #fff;
-    border-radius: 0px;
 	color: #a5a6a8;
     background: transparent;
 	cursor: pointer;
@@ -74,6 +93,50 @@ nav a{
 	height: 100%;
 	padding: 1em 2rem;
 	box-sizing: border-box;
+}
+
+.form{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-evenly;
+}
+
+label{
+	text-align: left;
+}
+
+input:not([type="submit"]) {
+    background: #a5a6a8;
+    padding: 0.75rem;
+	width: 100%;
+}
+
+input[type="submit"]{
+	border: 1px solid #fff;
+	color: #a5a6a8;
+    background: transparent;
+	cursor: pointer;
+    padding: 0.75rem;
+}
+
+.menu{
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	@media screen and (max-width: 600) {
+		grid-template-columns: none;
+	}
+}
+
+.menu-item{
+	text-align: left;
+}
+
+.diet-list{
+	list-style: none;
+	font-size: 0.75em;
+	text-align: center;
 }
 
 .open-hours{
