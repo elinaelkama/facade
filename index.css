@@ -4,6 +4,7 @@
 	--text-tertiary: #a5a6a8;
 	--text-reverse: #000;
 	--accent-primary: #fff;
+	--site-width: 60rem;
 }
 
 body {
@@ -13,10 +14,22 @@ body {
 	text-align: center;
 	min-height: 100vh;
 	margin: 0;
+	@media  screen and (max-width: 1000px) {
+		padding: 0 1rem;
+	}
 }
 
 header{
-	margin-bottom: 4em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	max-width: var(--site-width);
+	margin: auto;
+	margin-bottom: 4rem;
+	@media  screen and (max-width: 730px) {
+		grid-template-columns: auto;
+		margin-bottom: 2rem;
+	}
 }
 
 article > h1{
@@ -47,7 +60,7 @@ button{
 	color: var(--text-tertiary);
     background: transparent;
 	cursor: pointer;
-	padding: 1em;
+	padding: 1rem;
 }
 
 .highlight-button:hover{
@@ -77,7 +90,7 @@ nav > ul > li:hover > ul{
 nav > ul > li > ul{
 	display: none;
 	position: absolute;
-	top: 3em;
+	top: 3rem;
 	transform: translateX(-50%);
     left: 50%;
 	background-color: #f1f1f1;
@@ -92,7 +105,7 @@ nav a{
 	display: block;
 	width: 100%;
 	height: 100%;
-	padding: 1em 2rem;
+	padding: 1rem 2rem;
 	box-sizing: border-box;
 }
 
@@ -121,7 +134,7 @@ input[type="submit"]{
 }
 
 .menu{
-	max-width: 60rem;
+	max-width: var(--site-width);
 	gap: 3rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -150,7 +163,7 @@ input[type="submit"]{
 
 .diet-list{
 	list-style: none;
-	font-size: 0.95em;
+	font-size: 0.95rem;
 	text-align: center;
 	padding: 0;
 }
@@ -171,7 +184,7 @@ input[type="submit"]{
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0,0,0,0.65);
-	box-shadow: 0 0 5em 0.25em black inset;
+	box-shadow: 0 0 5rem 0.25rem black inset;
 	content: "";
 	left: 0;
 	top: 0;
@@ -197,6 +210,19 @@ input[type="submit"]{
 .bg-champagne{
 	background-image: url("/images/bg_champagne.jpg");
 }
+
 .bg-cloudberry{
 	background-image: url("/images/bg_cloudberry.jpg");
+}
+
+.logo{
+	padding: 1rem 0;
+	text-align: left;
+	@media  screen and (max-width: 730px) {
+		text-align: center;
+	}
+}
+
+.logo img{
+	height: 4rem;
 }
