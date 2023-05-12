@@ -8,6 +8,8 @@
 }
 
 body {
+	display: grid;
+	grid-template-rows: min-content auto min-content;
     background-color: #000;
     font-family: 'Montserrat', sans-serif;
     color: var(--text-primary);
@@ -32,17 +34,40 @@ header{
 	}
 }
 
+article{
+	max-width: var(--site-width);
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-secondary);
+}
+
 article > h1{
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 5rem;
+}
+
+article > h2{
 	font-weight: 300;
 	text-transform: uppercase;
 }
 
 article > h3{
 	color: var(--text-primary);
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
-h1, h2, h3, h4 {
-    color: var(--text-secondary);
+p{
+	line-height: 1.5rem;
+}
+
+.intro p{
+	max-width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a{
@@ -55,12 +80,13 @@ a:hover:not(.no-click), a:active:not(.no-click) {
 	cursor: pointer;
 }
 
-button{
+article button{
 	border: 1px solid var(--accent-primary);
 	color: var(--text-tertiary);
     background: transparent;
 	cursor: pointer;
 	padding: 1rem;
+	font-size: 1rem;
 }
 
 .highlight-button:hover{
@@ -109,14 +135,28 @@ nav a{
 	box-sizing: border-box;
 }
 
-.form{
+article > form > div{
 	display: grid;
 	grid-template-columns: auto auto;
-	justify-content: space-evenly;
+	gap: 0 3rem;
+	
+	margin: auto;
+	text-align: left;
 }
 
-label{
-	text-align: left;
+article > form > div > div > label{
+	display: block;
+	padding:  1rem 0  0  0;
+}
+
+article > form > div > div > input{
+	padding: 0;
+}
+
+article .submit{
+	display: block;
+	text-align: center;
+	margin-top: 2rem;
 }
 
 input:not([type="submit"]) {
@@ -131,10 +171,15 @@ input[type="submit"]{
     background: transparent;
 	cursor: pointer;
     padding: 0.75rem;
+	font-size: 1rem;
+}
+
+footer{
+	text-align: left;
+	padding: 0 1rem;
 }
 
 .menu{
-	max-width: var(--site-width);
 	gap: 3rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -172,6 +217,7 @@ input[type="submit"]{
 	margin-left: auto;
   	margin-right: auto;
 	text-align: center;
+	border-spacing: 1rem 0;
 }
 
 .bg{
@@ -225,4 +271,9 @@ input[type="submit"]{
 
 .logo img{
 	height: 4rem;
+}
+
+.mask{
+	height: 2rem;
+	opacity: 20%;
 }
