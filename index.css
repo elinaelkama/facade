@@ -51,12 +51,14 @@ article > h1{
 article > h2{
 	font-weight: 300;
 	text-transform: uppercase;
+	margin-top: 3rem;
 }
 
 article > h3{
 	color: var(--text-primary);
 	font-weight: 300;
 	text-transform: uppercase;
+	margin-top: 3rem;
 }
 
 p{
