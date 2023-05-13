@@ -17,9 +17,7 @@ body {
 	text-align: center;
 	min-height: 100vh;
 	margin: 0;
-	@media  screen and (max-width: 1000px) {
-		padding: 0 1rem;
-	}
+	padding: 0 1rem;
 }
 
 header{
@@ -136,22 +134,20 @@ nav a{
 	box-sizing: border-box;
 }
 
-article > form > div{
+article > form {
 	display: grid;
-	grid-template-columns: auto auto;
-	gap: 0 3rem;
-	
+	grid-template-columns: auto;
+	gap: 1rem 0;
 	margin: auto;
 	text-align: left;
+	@media screen and (max-width: 750px) {
+		grid-template-columns: auto;
+	}
 }
 
-article > form > div > div > label{
+article > form > div > label{
 	display: block;
-	padding:  1rem 0  0  0;
-}
-
-article > form > div > div > input{
-	padding: 0;
+	padding:  1rem 0  0.2rem  0;
 }
 
 article .submit{
@@ -160,10 +156,13 @@ article .submit{
 	margin-top: 2rem;
 }
 
-input:not([type="submit"]) {
+input:not([type="submit"]), textarea {
+	box-sizing: border-box;
     background: #a5a6a8;
     padding: 0.75rem;
 	width: 100%;
+	font-family: sans-serif;
+	font-size: 1rem;
 }
 
 input[type="submit"]{
@@ -177,7 +176,6 @@ input[type="submit"]{
 
 footer{
 	text-align: left;
-	padding: 0 1rem;
 }
 
 .menu{
