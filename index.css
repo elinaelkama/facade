@@ -29,7 +29,7 @@ header{
 	max-width: var(--site-width);
 	margin: auto;
 	margin-bottom: 4rem;
-	@media  screen and (max-width: 730px) {
+	@media  screen and (max-width: 750px) {
 		grid-template-columns: auto;
 		margin-bottom: 2rem;
 	}
@@ -188,7 +188,7 @@ footer{
 	margin: auto;
 	flex-wrap: nowrap;
 	text-align: left;
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 750px) {
 		grid-template-columns: none;
 	}
 }
@@ -267,7 +267,7 @@ footer{
 .logo{
 	padding: 1rem 0;
 	text-align: left;
-	@media  screen and (max-width: 730px) {
+	@media  screen and (max-width: 750px) {
 		text-align: center;
 	}
 }
