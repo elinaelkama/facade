@@ -219,31 +219,37 @@ footer{
 .bg-sandwiches{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_sandwiches.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .bg-chickenwings{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_chickenwings.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .bg-tomatoes{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_tomatoes.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .bg-cake{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_carrotcake.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .bg-champagne{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_champagne.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .bg-cloudberry{
 	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_cloudberry.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .logo{
