@@ -26,10 +26,6 @@ header{
 	max-width: var(--site-width);
 	margin: auto;
 	margin-bottom: 4rem;
-	@media  screen and (max-width: 750px) {
-		grid-template-columns: auto;
-		margin-bottom: 2rem;
-	}
 }
 
 article{
@@ -141,9 +137,6 @@ article > form {
 	gap: 1rem 0;
 	margin: auto;
 	text-align: left;
-	@media screen and (max-width: 750px) {
-		grid-template-columns: auto;
-	}
 }
 
 article > form > div > label{
@@ -187,9 +180,6 @@ footer{
 	margin: auto;
 	flex-wrap: nowrap;
 	text-align: left;
-	@media screen and (max-width: 750px) {
-		grid-template-columns: none;
-	}
 }
 
 .menu > div{
@@ -259,9 +249,6 @@ footer{
 .logo{
 	padding: 1rem 0;
 	text-align: left;
-	@media  screen and (max-width: 750px) {
-		text-align: center;
-	}
 }
 
 .logo img{
@@ -271,4 +258,23 @@ footer{
 .mask{
 	height: 2rem;
 	opacity: 20%;
+}
+
+
+@media only screen and (max-width: 750px) {
+	header{
+		grid-template-columns: auto;
+		margin-bottom: 2rem;
+	}
+
+	article > form{
+		grid-template-columns: auto;
+	}
+	.menu{
+		grid-template-columns: none;
+	}
+
+	.logo{
+		text-align: center;
+	}
 }
