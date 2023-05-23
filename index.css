@@ -222,46 +222,39 @@ footer{
 }
 
 .bg{
-	background-size: cover;
-	background-position: 50% 50%;
-}
-
-.bg::before{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.65);
-	box-shadow: 0 0 5rem 0.25rem black inset;
-	content: "";
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+	
+  	background-position: center;
+  	box-shadow: 0 0 4rem 4rem black;
 }
 
 .bg-sandwiches{
-	background-image: url("/images/bg_sandwiches.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_sandwiches.jpg");
+	background-size: cover;
 }
 
 .bg-chickenwings{
-	background-image: url("/images/bg_chickenwings.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_chickenwings.jpg");
+	background-size: cover;
 }
 
 .bg-tomatoes{
-	background-image: url("/images/bg_tomatoes.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_tomatoes.jpg");
+	background-size: cover;
 }
 
 .bg-cake{
-	background-image: url("/images/bg_carrotcake.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_carrotcake.jpg");
+	background-size: cover;
 }
 
 .bg-champagne{
-	background-image: url("/images/bg_champagne.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_champagne.jpg");
+	background-size: cover;
 }
 
 .bg-cloudberry{
-	background-image: url("/images/bg_cloudberry.jpg");
+	background: linear-gradient(rgba(0,0,0, 0.9), rgba(0,0,0, 0.6)), url("/images/bg_cloudberry.jpg");
+	background-size: cover;
 }
 
 .logo{
